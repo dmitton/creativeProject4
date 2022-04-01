@@ -1,20 +1,26 @@
 <template>
 <div id="app">
-  <div class="header">
-    <router-link to="/">
-      <div class="logo">
-        <img src="/ordinary.png">
-      </div>
-    </router-link>
+<div class="header">
     <div class="title">
-      <h1>Museum of Ordinary Objects</h1>
+      <h1>Cookie Clicker</h1>
     </div>
+    <div class="home-link">
+	<router-link to="/">
+		<p>Home</p>
+        </router-link>
+    </div>
+    <div class="display-link">
+        <router-link to="/scores">
+                <p>Scores</p>
+        </router-link>
+    </div>
+
   </div>
   <div class="content">
     <router-view />
   </div>
   <div class="footer">
-    <router-link to="/admin">Admin</router-link>
+    <a href="https://github.com/dmitton/creativeProject4">GitHub Account</a>
   </div>
 </div>
 </template>
@@ -34,34 +40,52 @@ body {
 
 /* Header */
 .header {
+  height: 200px;
   display: flex;
   padding: 10px 100px 0px 100px;
-  background-color: #5BDEFF;
-  color: #1C454F;
+  background-image: linear-gradient(#FA8072,#FF6347);
+  color: #4a4141;
+  align-items: center;
+  justify-content: center;
 }
 
+
 .title {
+  padding-top: 30px;
+  text-align: center;
   margin-top: 5px;
 }
 
 .title h1 {
-  font-size: 30px;
+  font-size: 50px;
+}
+
+.home-link{
+ padding-left: 300px;
+ padding-top:30px;
+}
+
+.display-link{
+  padding-top: 30px;
+  padding-left:10px;
 }
 
 .content {
   padding: 20px 100px;
   min-height: 500px;
+  background-color: #A9A9A9;
 }
 
 /* Footer */
 .footer {
-  height: 50px;
+  height: 100px;
   padding: 20px 100px 0px 100px;
-  background: #e3e3e3;
+  background-image: linear-gradient(#FA8072,#FF6347);
   font-size: 12px;
 }
 
 .footer a {
+  font-size: 30px;
   color: #000;
 }
 
